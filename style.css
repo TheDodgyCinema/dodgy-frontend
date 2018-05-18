@@ -40,3 +40,32 @@ body {
 
 }
 
+	table, th, td {
+    border: 1px solid black;
+}
+
+
+/*form {
+    display: block;
+    margin-top: 0em;
+*/}
+
+h1, h2 {
+	color: red;
+}
+
+.title{
+		color:#ffffff;
+}
+
+.title2{
+		color:#ffffff;
+}
+
+.title3{
+		color:#ffffff;
+    background-color:yellow;
+    width:100px;
+    position:relative;
+    right:-50%;
+}
