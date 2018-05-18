@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="user-scaleable=no, initial-scale=1.0">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
@@ -13,13 +13,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-       <link rel="stylesheet" href="qunit-2.4.1.css">
-    <script src="typeit.js"></script>
-     
     <div id="qunit-fixture"></div>
-    <script src="qunit-2.4.1.js"></script>
-    <script src="tests.js"></script>
-    <script src="typeit.js"></script>
+    
 
      <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -27,28 +22,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    
     <script src="js/bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet">
   </head>
 <!-- NAVBAR
 ================================================== -->
   <body>
+
+    
        <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -67,8 +47,7 @@
             <li><a href="aboutus.html">About Us</a></li>
               <li><a href="placestogo.html">Places To Go</a></li>
         
-     
-    
+
        
       </ul>
     </div>
@@ -83,16 +62,39 @@
 
 </div>
 
-<img src="C:\Users\hugh6\Desktop\FinalProject\images\cinema.jpg" alt="cinema" style="width:500px;height:600px;">
-
-
 </style>
 </head>
 <body>
 
-<h2 class = "title2">Our Address</h2>
+<div class="Container">
+  <div class="row">
+    <div class="col-lg-4">
+      <img src="C:\Users\hugh6\Desktop\FinalProject\images\CinemaFront.jpg" alt="cinema" style="width:500px;height:500px;">
+    </div>
+    <div class="col-lg-4";>
+      <p class ="p1";> Lorem ipsum dolor sit amet, sea porro hendrerit ne, id adhuc repudiare quo, cum feugait forensibus ad. Ei vis case liber vituperata. Oratio doming probatus vel ea, impetus complectitur ad eum, vero sensibus cu mea. Ut vel probo appareat evertitur, quis quidam ei sea, has ei propriae splendide.
 
-<table style="background-color:#ffffff">
+Quo ut facete impedit facilis, ocurreret maluisset ut quo. Aliquam eloquentiam has cu, no eam vitae quaestio torquatos, nec ex moderatius necessitatibus. Id euismod veritus usu. Ea mea vocent alterum, ea sit libris laboramus. Cu everti menandri salutatus vis, pri diam quas assueverit ne. Magna epicurei repudiandae usu et, munere voluptua intellegat no sit.
+
+Errem disputando in vis, an pro magna virtute. Qui assum quodsi vocibus at, nam no soluta scribentur. Eos te nihil argumentum necessitatibus, an duo tale affert mucius. Ne vix vide detraxit tincidunt, ignota vulputate ne mei.
+
+An sea aeque facete. Virtute abhorreant eam in. Eu brute vulputate mel. Nec an rationibus definiebas, ea stet viderer integre cum, eum at odio autem delectus. Ut vis percipit volutpat postulant, nobis audire an mei, verear principes ea eum. Viris decore mentitum sea eu.
+
+Option omittantur dissentiunt ne usu. Vix veniam apeirian prodesset et. Omnis deleniti an sit, ferri apeirian sit ad. Quo tincidunt omittantur ei, quo cu illum volumus, legimus meliore mentitum id pri. Oratio albucius appetere in eos. Tota pertinax vel id. Ut his debet oratio, tacimates indoctum salutandi te eam.<p/>
+    </div>
+
+    <div class="col-lg-4">
+
+ 
+ <div id="map" style="width:400px;height:400px;background:yellow"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <h2 class = "title2">Our Address</h2>
+
+<table class = "OurAddressTable" style= "width:600">
 
   <tr>
     <td>Line 1</td>
@@ -123,13 +125,14 @@
    <tr>
     <td>PhoneNo</td>
     <td>  +44 7976209283</td>
-  
   </tr>
 </table>
+    </div>
 
-<h2 class = "title3">Contact Us</h2>
 
-<form action="/action_page.php" style="background-color:#ffffff">
+<div class="col-lg-6">
+      <h2 class = "title3">Contact Us</h2>
+<form class = "ContactUsForm" action="/action_page.php">
   Name:<br>
   <input type="text" name="Name" value="">
   <br>
@@ -141,15 +144,28 @@
   <br><br>
   <input type="submit" value="Submit">
 </form> 
-
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+    </div>
+    
+  </div>
+</div>
 
 
 <br><br><br>
 <center>
 </center>
 
-
+<script>
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(53.474096, -2.286285),
+    zoom: 15,
+ 
+    mapTypeId: google.maps.MapTypeId.MAP
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC86ynQrvpUvDHzlAR0MlJPmbQjXxB9Dug&callback=myMap"></script>
 
   </body>
 </html>
