@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
+
+    <title>Local Places</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+       <link rel="stylesheet" href="qunit-2.4.1.css">
+    <script src="typeit.js"></script>
+     
+    <div id="qunit-fixture"></div>
+    <script src="qunit-2.4.1.js"></script>
+    <script src="tests.js"></script>
+    <script src="typeit.js"></script>
+
+     <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   
+    <script src="js/bootstrap.min.js"></script>
+   
+    <link href="style.css" rel="stylesheet">
+    <title>Place searches</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    
+    <script>
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+      var map;
+      var infowindow;
+
+      function initMap() {
+        var pyrmont = {lat: 53.474096, lng: -2.286285};
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: pyrmont,
+          zoom: 15
+        });
+
+
+        var marker = new google.maps.Marker({
+          position: pyrmont,
+          map: map, 
+
+          label: "QA"
+        });
+
+
+
+
+
+        infowindow = new google.maps.InfoWindow();
+        var service = new google.maps.places.PlacesService(map);
+        service.nearbySearch({
+          location: pyrmont,
+          radius: 500,
+          type: ['restaurant']
+        }, callback);
+      }
+
+      function callback(results, status) {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+          for (var i = 0; i < results.length; i++) {
+            createMarker(results[i]);
+          }
+        }
+      }
+
+      function createMarker(place) {
+        var placeLoc = place.geometry.location;
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent(place.name);
+          infowindow.open(map, this);
+        });
+      }
+    </script>
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+
+         <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+
+        
+    <li><a href="whatson.html">What's On</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+              <li><a href="placestogo.html">Places To Go</a></li>
+        
+     
+    
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ 
+
+ 
+
+
+    </div>
+
+<br><br><br>
+<div id="map"></div>
+<div id="container">
+<center><h1>Nearby places to go</h1></center><br><br>
+
+</div>
+ <div id="map"></div>
+
+
+</div>
+</center>
+<script>
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(53.474096, -2.286285),
+    zoom: 15,
+ 
+    mapTypeId: google.maps.MapTypeId.MAP
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+
+
+</script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC86ynQrvpUvDHzlAR0MlJPmbQjXxB9Dug&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC86ynQrvpUvDHzlAR0MlJPmbQjXxB9Dug&libraries=places&callback=initMap" async defer></script>
+
+  </body>
+</html>

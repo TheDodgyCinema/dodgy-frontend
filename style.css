@@ -86,6 +86,8 @@ h1, h2 {
     position: relative;
 	background-color: lightgrey;
 	opacity: 0.85;
+   height: 200px;
+
 }
 
 #map {
