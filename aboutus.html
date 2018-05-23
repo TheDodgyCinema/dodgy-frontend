@@ -27,7 +27,7 @@
 ================================================== -->
 
 <body>
-
+<center><img src="images/miragex.jpg" height="275" width="100%" id="miragex"></center>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -155,6 +155,7 @@
 
         <script>
             function myMap() {
+                var QA = {lat:53.474096, lng: -2.286285};
                 var mapOptions = {
                     center: new google.maps.LatLng(53.474096, -2.286285),
                     zoom: 15,
@@ -162,7 +163,18 @@
                     mapTypeId: google.maps.MapTypeId.MAP
                 }
                 var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+                var marker = new google.maps.Marker({
+                    position: QA,
+                    map: map
+                    
+                
+                    });
             }
+
+
+
+
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC86ynQrvpUvDHzlAR0MlJPmbQjXxB9Dug&callback=myMap"></script>
 

@@ -43,6 +43,7 @@
 ================================================== -->
 
 <body>
+  <center><img src="images/miragex.jpg" height="275" width="100%" id="miragex"></center>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -71,12 +72,12 @@
                 <img class="img-responsive" src="C:\Users\hugh6\Desktop\FinalProject\images\DeliFresh.jpg" alt="DeliFresh" style="width:325px;height:325px;">
             </div>
             <div class="col-lg-4" ;>
+              <h3>DeliFresh</h3>
                 <p>
-                    DeliFresh Salad Bar offers an exciting Healthy Option. With a unique concept to create your very own Salad, there are endless combinations for a healthy tasty lunch you can never get tired of.</p>
-
-                <p>Trams run every 12 minutes between the Cornbrook and MediaCityUK Manchester stops from 7.15am to 8pm, Monday to Friday and from 9.30am to 6pm on Saturdays. The Eccles line service also stops at Broadway and Harbour City during these times. Outside these times, Eccles line trams call at the MediaCityUK Manchester stop, during normal tram operating times. When the shuttle is running, this means that there is a 6 minute service between Cornbrook and Harbour City</p>
-
+                DeliFresh Salad Bar offers an exciting Healthy Option. With a unique concept to create your very own Salad, there are endless combinations for a healthy tasty lunch you can never get tired of.
+                Trams run every 12 minutes between the Cornbrook and MediaCityUK Manchester stops from 7.15am to 8pm, Monday to Friday and from 9.30am to 6pm on Saturdays. The Eccles line service also stops at Broadway and Harbour City during these times. Outside these times, Eccles line trams call at the MediaCityUK Manchester stop, during normal tram operating times. When the shuttle is running, this means that there is a 6 minute service between Cornbrook and Harbour City</p>
                 <p/>
+
             </div>
             <div class="col-lg-4" ;>
                 <div class="img-rounded" id="map" style="width:325px;height:325px;background:yellow"></div>
@@ -87,6 +88,7 @@
                     <img class="img-responsive" src="C:\Users\hugh6\Desktop\FinalProject\images\Beefeater.jpg" alt="DeliFresh" style="width:325px;height:325px;">
                 </div>
                 <div class="col-lg-4" ;>
+                   <h3>Beefeater</h3>
                     <p>
                         Beefeater opened their doors back in 1974, and were driven by a passion for glorious steak. Mouth-watering cuts at mouth-watering prices was their motto. Reassuringly nothing's changed, these things still drive them today and they always will. Beefeater believe in two things, a warm friendly welcome and serving incredible steak that you can kick back, relax and enjoy. Whether you're celebrating after a visit to Old Trafford or relaxing from a busy day shopping at the Lowry or Trafford Centre, the Quay House is the ideal restaurant for all occasions</p>
                 </div>
@@ -100,7 +102,7 @@
                         <img class="img-responsive" src="C:\Users\hugh6\Desktop\FinalProject\images\Subway.jpg" alt="Subway" style="width:325px;height:325px;">
                     </div>
                     <div class="col-lg-4" ;>
-
+                        <h3>Subway</h3>
                         <p>Subway is an American privately held fast food restaurant franchise that primarily sells submarine sandwiches (subs) and salads. Subway is one of the fastest-growing franchises in the world and, as of June 2017, has approximately 45,000 stores located in more than 100 countries. More than half of the stores are located in the United States. It is the largest single-brand restaurant chain and the largest restaurant operator in the world.
 
                         </p>
@@ -115,6 +117,7 @@
                             <img class="img-responsive" src="C:\Users\hugh6\Desktop\FinalProject\images\Cau.jpg" alt="DeliFresh" style="width:325px;height:325px;">
                         </div>
                         <div class="col-lg-4" ;>
+                          <h3>CAU</h3>
                             <p>
                                 'When we started CAU, our vision was to create a restaurant that would fit perfectly in the heart of Palermo, Buenos Aires. If we could replicate that spirit, vitality, passion and sense of fun, we knew CAU would become a home from home for our diners.</p>
 
@@ -130,6 +133,7 @@
                                 <img class="img-responsive" src="C:\Users\hugh6\Desktop\FinalProject\images\Marco.jpg" alt="Marco" style="width:325px;height:325px;">
                             </div>
                             <div class="col-lg-4" ;>
+                              <h3>Marco's New York Italian</h3>
                                 <p>
                                     Marco’s New York Italian from celebrity chef Marco Pierre White, offers casual, comfortable dining for every occasion. The MediaCityUK team pride themselves on offering friendly, approachable service that makes every meal memorable. Leather booths, funky comfortable chairs, crazy light fittings and stylish tableware all add to the laid back dining experience. Expect to taste the rock star chef’s Italian heritage with wholesome rustic dishes, all with a larger than life New York twist. Think big crispy pizza’s, fresh fish, succulent steaks and tantalising desserts all showcasing the very best fresh ingredients. Marco’s celebrates the joy of eating, be it lunch, dinner or Afternoon Tea! The venue is located on the Mezzanine floor inside the Holiday Inn MediaCityUK a short stroll from the Lowry Theatre, Old Trafford and Salford Quays or a few tram stops out of Manchester City centre.</p>
                             </div>
@@ -141,11 +145,13 @@
                             </center>
                             <script>
                                 function myMap() {
+                                  var lp = {lat: 53.4708167, lng: -2.293165799999997}
                                     var mapOptions = {
                                         center: new google.maps.LatLng(53.4708167, -2.293165799999997),
                                         zoom: 15,
 
-                                        mapTypeId: google.maps.MapTypeId.Map
+                                        mapTypeId: google.maps.MapTypeId.MAP
+
                                     }
 
                                     var mapOptions2 = {
@@ -195,7 +201,24 @@
                                     var map5 = new google.maps.Map(document.getElementById("map5"), mapOptions5);
                                     var map6 = new google.maps.Map(document.getElementById("map6"), mapOptions6);
 
-                                }
+
+
+                var marker = new google.maps.Marker({
+                    position: lp,
+                    map: map
+
+
+                
+                    });
+            }
+
+
+
+
+
+
+
+                                
                             </script>
                             <div></div>
 
